@@ -136,6 +136,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="_Source\Resource_Management\ResourceMaster.cpp" />
     <ClCompile Include="_Source\Startup_And_Close\Window.cpp" />
     <ClCompile Include="_Source\Resource_Management\UIManager.cpp" />
     <ClCompile Include="_Source\Resource_Management\ModelManager.cpp" />
@@ -144,6 +145,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_Header\Resource_Management\ResourceMaster.h" />
     <ClInclude Include="_Header\Startup_And_Close\Window.h" />
     <ClInclude Include="_Header\Resource_Management\UIManager.h" />
     <ClInclude Include="_Header\Resource_Management\ModelManager.h" />

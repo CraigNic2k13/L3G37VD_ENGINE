@@ -19,6 +19,7 @@ private:
 	// Methods.
 	void			initSystem();
 	void			systemStateCheck();
+	void			SDL_Check();
 	void			initOpenGL(SDL_Window* w);
 	void			setOpenGLAttributes();
 
@@ -31,6 +32,7 @@ private:
 	SDL_Window*		window;
 	SDL_GLContext	GL_Context;
 	Uint32			subSystem_Init;
+	int r, g, b, a, minor, major, visual, depthSize, stencil, buffer, dblBuffer, core, flags;
 };
 #endif  WINDOW_H
 

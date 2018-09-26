@@ -5,10 +5,5 @@
 int main(int argc, char *argv[])
 {
 	Window w;
-	
-
-
-	//std::cout << "test" << std::endl;
-	//system("pause");
 	return 0;
 }

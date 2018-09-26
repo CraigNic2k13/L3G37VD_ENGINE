@@ -33,6 +33,9 @@
     <ClCompile Include="_Source\Startup_And_Close\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="_Source\Resource_Management\ResourceMaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="_Header\Resource_Management\AudioManager.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="_Header\Startup_And_Close\Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_Header\Resource_Management\ResourceMaster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
