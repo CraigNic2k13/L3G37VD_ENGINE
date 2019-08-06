@@ -75,7 +75,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\glew-2.1.0\include\GL;$(SolutionDir)\Dependencies\bullet3-2.87\src;$(SolutionDir)\Dependencies\SDL2-2.0.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL2-2.0.7\include;$(SolutionDir)\Dependencies\glew-2.1.0\include\GL;$(SolutionDir)\Dependencies\bullet3-2.87\src;$(SolutionDir)\Dependencies\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SDL_MAIN_HANDLED;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -92,7 +92,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL2-2.0.7\include;$(SolutionDir)\Dependencies\glew-2.1.0\include\GL;$(SolutionDir)\Dependencies\bullet3-2.87\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL2-2.0.7\include;$(SolutionDir)\Dependencies\glew-2.1.0\include\GL;$(SolutionDir)\Dependencies\bullet3-2.87\src;$(SolutionDir)\Dependencies\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SDL_MAIN_HANDLED;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -100,6 +100,7 @@
       <AdditionalLibraryDirectories>$(SolutionDir)\Dependencies\bullet3-2.87\bin;$(SolutionDir)\Dependencies\glew-2.1.0\lib\Debug\x64;$(SolutionDir)\Dependencies\SDL2-2.0.7\lib\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2main.lib;SDL2.lib;opengl32.lib;glew32sd.lib;BulletCollision.lib;BulletDynamics.lib;BulletSoftBody.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>msvcrtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -109,7 +110,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\bullet3-2.87\bullet3-2.87\src;$(SolutionDir)\Dependencies\glew-2.1.0\include\GL;$(SolutionDir)\Dependencies\SDL2-2.0.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL2-2.0.7\include;$(SolutionDir)\Dependencies\glew-2.1.0\include\GL;$(SolutionDir)\Dependencies\bullet3-2.87\src;$(SolutionDir)\Dependencies\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>SDL_MAIN_HANDLED;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -129,13 +130,16 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Dependencies\SDL2-2.0.7\include;$(SolutionDir)\Dependencies\glew-2.1.0\include\GL;$(SolutionDir)\Dependencies\bullet3-2.87\src;$(SolutionDir)\Dependencies\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="_Source\Graphics\Shader.cpp" />
     <ClCompile Include="_Source\Resource_Management\ResourceMaster.cpp" />
     <ClCompile Include="_Source\Startup_And_Close\Window.cpp" />
     <ClCompile Include="_Source\Resource_Management\UIManager.cpp" />
@@ -145,6 +149,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="_Header\Graphics\Shader.h" />
+    <ClInclude Include="_Header\Startup_And_Close\EngineState.h" />
     <ClInclude Include="_Header\Resource_Management\ResourceMaster.h" />
     <ClInclude Include="_Header\Startup_And_Close\Window.h" />
     <ClInclude Include="_Header\Resource_Management\UIManager.h" />
